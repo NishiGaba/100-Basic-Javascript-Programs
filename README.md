@@ -1,4 +1,4 @@
-![Imgur](https://drive.google.com/drive/folders/0B8lIoDfdqJ1bRGxCZ3NmXy10ODg)
+![Imgur](img/jsLogo.png)
 
 A comprehensive list of Basic Javascript Programs that can help you be **more productive, stay informed**, and become a **better programmer**. 
 
