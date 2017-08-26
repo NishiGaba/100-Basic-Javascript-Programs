@@ -28,3 +28,5 @@ A comprehensive list of Basic Javascript Programs that can help you be **more pr
 - Prompts
 
 - Form Validations
+
+- Vowels
