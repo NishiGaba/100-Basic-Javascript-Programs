@@ -7,24 +7,24 @@ A comprehensive list of Basic Javascript Programs that can help you be **more pr
 
 ## ✨ List of Programs
 
--Patterns
+- Patterns
 
--Play with Numbers
+- Play with Numbers
 
--Palindrome
+- Palindrome
 
--Even and Odd
+- Even and Odd
 
--Fibbonacci
+- Fibbonacci
 
--Factorials
+- Factorials
 
--Permutations and Combinations
+- Permutations and Combinations
 
--Animation
+- Animation
 
--Alerts
+- Alerts
 
--Prompts
+- Prompts
 
--Form Validations
+- Form Validations
