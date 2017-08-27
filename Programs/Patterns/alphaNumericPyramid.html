@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>100 Basic Javascript Programs</title>
+	<link rel="stylesheet" type="text/css" href="../../vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="../../vendor/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+
+		function runProgram() {
+
+			var output = "";
+			var program = document.getElementById("program-container");
+
+			var num = prompt("Please Enter the Numeric Value" );
+
+			for(var i=1; i<=num; ++i)
+		    {
+		        for(var j=1; j<=i; ++j)
+		        {
+		             output += String.fromCharCode(65 + j-1) + " &nbsp; "; 
+		            
+		        }
+		       document.write(output);
+               output = "<br>";
+		    }
+		}
+
+		runProgram();
+
+	</script>
+</body>
+</html>

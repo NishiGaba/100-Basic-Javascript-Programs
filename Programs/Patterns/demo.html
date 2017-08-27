@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pyramid Program</title>
+</head>
+<body>
+    
+    <h3>How To Display Pyramid Using Javascript?</h3>
+
+    <article>
+        <h3>Pyramid Program 01</h3>
+        <script type="text/javascript">
+            function generatePyramid() {
+                var totalNumberofRows = 5;
+                var output = "";
+                for (var i = 1; i <= totalNumberofRows; i++) {
+                    for (var j = 1; j <= i; j++) {
+                        output += j + " &nbsp; ";
+                    }
+
+                    document.write(output);
+                    output = "<br>";
+                }
+            }
+
+            generatePyramid();
+        </script>
+    </article>
+
+    <article>
+        <h3>Pyramid Program 04</h3>
+        <script type="text/javascript">
+            function generatePyramid() {
+                var totalNumberofRows = 5;
+                var output = "";
+
+                // top side 
+                for (var i = 1; i <= totalNumberofRows; i++) {
+                    for (var j = 1; j <= i; j++) {
+                        output += "* &nbsp; ";
+                    }
+
+                    document.write(output);
+                    output = "<br>";
+                }
+
+                // bottom side
+                for (var i = totalNumberofRows; i >= 1; i--) {
+                    for (j = 1; j < i; j++) {
+                        output += "* &nbsp; ";
+                    }
+
+                    document.write(output);
+                    output = "<br>";
+                }
+
+            }
+
+            generatePyramid();
+        </script>
+    </article>
+
+
+
+    <article>
+        <h3>Pyramid Program 01 [ Square ]</h3>
+        <script type="text/javascript">
+            function generatePyramid() {
+                var row = 5;
+                var output = "";
+
+                for (i = 1; i <= row; i++) {
+                    for (j = 1; j <= row; j++) {
+                        output += "* &nbsp; ";
+                    }
+
+                    document.write(output);
+                    output = "<br>";
+                }
+            }
+
+            generatePyramid();
+        </script>
+    </article>
+
+
+
+
+
+    <article>
+        <h3>Pyramid Program 02 [ Rectangular ]</h3>
+        <script type="text/javascript">
+            function generatePyramid() {
+                var row = 5;
+                var column = 8;
+                var output = "";
+
+                for (i = 1; i <= row; i++) {
+                    for (j = 1; j <= column; j++) {
+                        output += "* &nbsp; ";
+                    }
+
+                    document.write(output);
+                    output = "<br>";
+                }
+            }
+
+            generatePyramid();
+        </script>
+    </article> 
+
+
+
+
+    <article>
+        <h3>Pyramid Program 03 [ Hollow Square ]</h3>
+        <script type="text/javascript">
+            function generatePyramid() {
+                var row = 5;
+                var output = "";
+
+                for (i = 0; i < row; i++) {
+                    for (j = 0; j < row; j++) {
+                        if(i == 0 || i == (row - 1) || j == 0 || j == (row - 1)){
+                            output += "* &nbsp;";
+                        } else {
+                            output += "&nbsp; &nbsp;&nbsp;";
+                        }
+                        
+                    }
+
+                    document.write(output);
+                    output = "<br>";
+                }
+            }
+
+            generatePyramid();
+        </script>
+    </article>
+
+
+
+
+
+    <article>
+        <h3>Pyramid Program 04 [ Hollow Rectangular ]</h3>
+        <script type="text/javascript">
+            function generatePyramid() {
+                var row = 5;
+                var column = 8;
+                var output = "";
+
+                for (i = 0; i < row; i++) {
+                    for (j = 0; j < column; j++) {
+                        // Check if currely position is a boundary position
+                        if(i == 0 || i == (row - 1) || j == 0 || j == (column - 1)){
+                            output += "* &nbsp;";
+                        } else {
+                            output += "&nbsp; &nbsp;&nbsp;";
+                        }
+                        
+                    }
+
+                    document.write(output);
+                    output = "<br>";
+                }
+            }
+
+            generatePyramid();
+        </script>
+    </article>
+
+
+
+
+    <article>
+        <h3>Pyramid Program 05 [ Left Triangle ]</h3>
+        <script type="text/javascript">
+            function generatePyramid() {
+                var row = 5;
+                var output = "";
+                for (var i = 1; i <= row; i++) {
+                    for (var j = 1; j <= i; j++) {
+                        output += "* &nbsp; ";
+                    }
+
+                    document.write(output);
+                    output = "<br>";
+                }
+            }
+
+            generatePyramid();
+        </script>
+    </article>
+
+
+
+    <article>
+        <h3>Pyramid Program 06 [ Mirrored Right Triangle ]</h3>
+        <script type="text/javascript">
+            function generatePyramid() {
+                var row = 5;
+                var output = "";
+                for (var i = 1; i <= row; i++) {
+                    for (var j = 1; j <= row; j++) {
+                        if(j <= (row - i)){
+                            output += "&nbsp; &nbsp;&nbsp; ";
+                        } else {
+                            output += "* &nbsp; ";
+                        }
+                    }
+
+                    document.write(output);
+                    output = "<br>";
+                }
+            }
+
+            generatePyramid();
+        </script>
+    </article>
+
+
+
+    <article>
+        <h3>Pyramid Program 07 [ Left Reverse Triangle ]</h3>
+        <script type="text/javascript">
+            function generatePyramid() {
+                var row = 5;
+                var output = "";
+                for (i = row; i >= 1; i--) {
+                    for (j = 0; j < i; j++) {
+                        output += "* &nbsp; ";
+                    }
+
+                    document.write(output);
+                    output = "<br>";
+                }
+            }
+
+            generatePyramid();
+        </script>
+    </article>
+
+
+</body>
+</html>
