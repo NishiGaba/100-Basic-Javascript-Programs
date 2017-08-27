@@ -1,0 +1,12 @@
+body {
+	background: rgba(128, 128, 128, 0.57);
+}
+
+.btn-style {
+	margin-top: 18px;
+}
+
+#program-container {
+	background: white;
+	height:600px;
+}
