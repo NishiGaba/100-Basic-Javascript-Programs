@@ -1,50 +1,49 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title>100 Basic Javascript Programs</title>
-	<link rel="stylesheet" type="text/css" href="../../vendor/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script type="text/javascript" src="../../vendor/js/bootstrap.min.js"></script>
-</head>
-<body>
-	<script type="text/javascript">
-
-		function runProgram() {
-
-			var output = "";
-			var program = document.getElementById("program-container");
-
-			var num = prompt("Please Enter the Numeric Value" );
-
-			//Left Top Side
-			 for (var i = 1; i <= num; i++) {
-                for (var j = 1; j <= num; j++) {
-                    if(j <= (num - i)){
-                        output += "&nbsp; &nbsp; ";
-                    } else {
-                        output += "* &nbsp; ";
-                    }
+    <head>
+        <title>JavaScript to print Diamond pattern!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function printDiamond() {
+                document.getElementById("result").innerHTML = "";
+                var limit = document.getElementById("limit").value;
+ 
+                if (limit < 2 || limit > 100) {
+                    alert('Please enter value between 1 and 101');
+                    return;
                 }
-
-                document.write(output);
-                output = "<br>";
+ 
+                var space = limit;
+                for (i = 1; i <= limit; i++) {
+                    for (j = 1; j <= space; j++) {
+                        document.getElementById("result").insertAdjacentHTML('beforeend', '&nbsp;&nbsp;');
+                    }
+                    space--;
+                    for (j = 1; j <= 2 * i - 1; j++) {
+                        document.getElementById("result").insertAdjacentHTML('beforeend', '*');
+                    }
+                    document.getElementById("result").insertAdjacentHTML('beforeend', '<br>');
+                }
+ 
+                space = 2;
+                for (i = 1; i <= limit; i++) {
+                    for (j = 1; j <= space; j++) {
+                        document.getElementById("result").insertAdjacentHTML('beforeend', '&nbsp;&nbsp;');
+                    }
+                    space++;
+                    for (j = 1; j <= 2 * (limit - i) - 1; j++) {
+                        document.getElementById("result").insertAdjacentHTML('beforeend', '*');
+                    }
+                    document.getElementById("result").insertAdjacentHTML('beforeend', '<br>');
+                }
+                alert('Done!');
             }
-
-            //Right Top Side
-            for(var i=1; i<=num; ++i)
-		    {
-		        for(var j=1; j<=i; ++j)
-		        {
-		             output += '*' + " &nbsp; "; 
-		        }
-		       document.write(output);
-               output = "<br>";
-		    }
-		}
-
-		runProgram();
-
-	</script>
-</body>
+        </script>
+    </head>
+    <body>
+        <h2>JavaScript to print Diamond pattern!</h2>
+        Enter the limit:  <input type="number" id="limit" min="2" max="100" />&nbsp;<input type="button" value="Print Diamond Pattern!" onclick="printDiamond()" name="print" />
+        <br /> <br />
+        <div id="result"></div>
+    </body>
 </html>

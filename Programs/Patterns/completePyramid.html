@@ -1,0 +1,44 @@
+<script type = "text/javascript">
+function diamond( n ) 
+{
+
+    // top: 1 to n
+    document.write("<pre>");
+    
+    for(var i = 1; i <= n; ++i )
+    {
+        // write n-i spaces:
+        for ( var s = 1; s <= n-i; ++s )
+        {
+            document.write(" ");
+        }
+        // then write i asterisk+space sets:
+        for (var  s = 1; s <= i; ++s )
+        {
+            document.write("* ");
+        }
+        document.write("\n");
+    }
+    // bottom: n-1 down to 1
+    for(i = n-1; i >= 1; --i )
+    {
+        // write n-i spaces:
+        for (var  s = 1; s <= n-i; ++s )
+        {
+            document.write(" ");
+        }
+        // then write i asterisk+space sets:
+        for ( var s = 1; s <= i; ++s )
+        {
+            document.write("* ");
+        }
+        document.write("\n");
+    }
+    document.write("</pre>");
+}
+diamond(10);
+
+</script>
+
+</body> 
+</html>
