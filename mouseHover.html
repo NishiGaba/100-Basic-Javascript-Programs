@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+</head>
+<body>
+    <p onmouseover="over()" onmouseout="out()">Hello World</p>
+    <h1 id="change"></h1>
+    <script>
+        var p=document.getElementById("change")
+        function over()
+        {
+            document.body.style.backgroundColor = "green";
+            p.innerText="Mouse Over"
+        }
+        function out(){
+            document.body.style.backgroundColor = "blue";
+           p.innerText="Mouse out"
+        }
+    </script>
+
+</body>
+</html>

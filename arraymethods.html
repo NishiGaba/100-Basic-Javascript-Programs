@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body style="background-color:#8ED2C9 ; text-align: center;">
+    <h1 style="text-align: center;"> Array Methods</h1>
+    <script>
+        var a=new Array();
+        var size = prompt("Enter Size")
+        for(i=0;i<size;i++){
+            a[i] =prompt('Enter '+(i+1)+' element')
+         }
+
+        document.writeln("<h3>Original Array</h3><br>")
+
+        for(var i=0;i<a.length;i++) 
+            document.writeln(a[i]+" ")
+
+        document.writeln("<h3>Converting Array to Strings</h3><br>")
+        var x = a.toString();
+        document.writeln(x+"<br>")
+
+        document.writeln("<h3>Using Join with /* </h3><br>")
+        var y = a.join("/*");
+        document.writeln(y+"<br>")
+
+        document.writeln("<h3>Popping</h3><br>")
+        a.pop()
+        for(var i=0;i<a.length;i++)
+            document.writeln(a[i]+" ")
+
+        document.writeln("<h3>Pushing 22</h3><br>")
+        a.push(22)
+        for(var i=0;i<a.length;i++)
+            document.writeln(a[i]+" ")
+
+        document.writeln("<h3>Shifting</h3><br>")
+        a.shift()
+        for(var i=0;i<a.length;i++)
+            document.writeln(a[i]+" ")
+
+        document.writeln("<h3>Unshifting with 5</h3><br>")
+        a.unshift(5)
+        for(var i=0;i<a.length;i++)
+            document.writeln(a[i]+" ")
+
+        document.writeln("<h3>Splicing {12,13} at position 1</h3><br>")
+        a.splice(1,0,12,13)
+        for(var i=0;i<a.length;i++)
+            document.writeln(a[i]+" ")
+        
+        document.writeln("<h3>Another Array: </h3><br>")
+        var b=[5,6,12,15]
+        for(var i=0;i<b.length;i++)
+            document.writeln(b[i]+" ")
+
+        var c=a.concat(b)
+        document.writeln("<h3> After Concatenation</h3><br>")
+        for(var i=0;i<c.length;i++)
+            document.writeln(c[i]+" ")
+
+        document.writeln("<h3>Slicing from position 1 to 4 </h3><br>")
+        var d=c.slice(1,4)  
+        for(var i=0;i<d.length;i++)
+            document.writeln(d[i]+" ")
+
+        document.writeln("<h3>Slicing from Position -3 </h3><br>")
+        var d=c.slice(-3)
+        for(var i=0;i<d.length;i++)
+            document.writeln(d[i]+" ")
+
+        document.writeln("<h3>Slicing from Position 1 to -3 </h3><br>")
+        var d=c.slice(1,-3)
+        for(var i=0;i<d.length;i++)
+            document.writeln(d[i]+" ")
+
+
+    </script>
+</body>
+</html>
