@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <title>Block Animation</title>
+<style>
+#myContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: blue;
+}
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<body>
+
+<p>
+<button onclick="myMove()">Click Me</button> 
+
+<button onclick="stop()">Stop</button> 
+</p>
+
+<div id ="myContainer">
+<div id ="myAnimation"></div>
+</div>
+
+<script>
+  var id;
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+   id = setInterval(frame, 300);
+  function frame() {
+      elem.style.top = Math.random()*350 + 'px'; 
+      elem.style.left = Math.random()*350 + 'px'; 
+  }
+}
+function stop(){
+    clearInterval(id)
+  }
+</script>
+
+</body>
+</html>
